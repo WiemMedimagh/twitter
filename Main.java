@@ -19,7 +19,7 @@ import org.apache.hadoop.io.Text;
 public class Main {
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
-        Job job = Job.getInstance(conf, "max share");
+        Job job = Job.getInstance(conf, "nbr like");
         job.setJarByClass(Main.class);
         job.setMapperClass(TokenizerMapper.class);
         job.setReducerClass(NbrReducer.class);
