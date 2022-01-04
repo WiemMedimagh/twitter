@@ -10,14 +10,14 @@ import java.io.IOException;
 public  class TokenizerMapper
 extends Mapper<LongWritable, Text, Text, NullWritable>{
 @Override
-public void map(LongWritable key, Text value, Context context
+public void map(NullWritable key, Text value, Context context
              ) throws IOException, InterruptedException {
 	String line = value.toString();
 
 	String[] data=line.split(",");
 	try {
 		String influenceur = data[0];
-		int nbre_like = Integer.parseInt(data[9]);	
+		int nbre_like = Integer.parseInt(data[8]);	
 		
 		context.write(new Text(influenceur),new IntWritable(nbre_like));
 			
