@@ -28,7 +28,7 @@ public void reduce(Text key,Iterable<IntWritable> values,Context context) throws
 	@Override
 protected void cleanup(Context context) throws IOException, InterruptedException {
 	System.out.print("le nr de like est "+summ );
-    context.write(summ, new IntWritable(summ));
+    context.write(summ, new IntWritable(sum));
    
 }  
 }
