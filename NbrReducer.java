@@ -31,5 +31,4 @@ protected void cleanup(Context context) throws IOException, InterruptedException
     context.write(summ, new IntWritable(summ));
    
 }  
-
 }
