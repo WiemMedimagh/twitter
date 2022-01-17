@@ -18,10 +18,10 @@ public void reduce(Text key,Iterable<NullWritable> values,Context context) throw
     	sum+= x.get();
     	
       
-    
+      }
     	summ += sum;
     	
-    }
+    
     }
     }
 @Override
