@@ -25,7 +25,10 @@ public void reduce(Text key,Iterable<NullWritable> values,Context context) throw
     }
     
 
-	System.out.print("linfluenceur ayant le plus nombre de like  est "+summ);
+	@Override
+protected void cleanup(Context context) throws IOException, InterruptedException {
+	System.out.print("le nr de like est "+summ );
+    context.write(summ, new IntWritable(summ));
    
     
 
