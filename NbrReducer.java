@@ -11,7 +11,7 @@ public class NbrReducer extends Reducer<Text, NullWritable, Text, NullWritable> 
 
 int summ = 0;
 
-public void reduce(Text key,Iterable<NullWritable> values,Context context) throws IOException, InterruptedException{
+public void reduce(Text key,Iterable<IntWritable> values,Context context) throws IOException, InterruptedException{
     
 	int sum =0;
     for(IntWritable x : values){
