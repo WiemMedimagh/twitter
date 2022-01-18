@@ -19,7 +19,7 @@ public void map(NullWritable key, Text value, Context context
 		String influenceur = data[0];
 		int nbre_like = Integer.parseInt(data[8]);	
 		
-		context.write(new Text(influenceur),new IntWritable(nbre_like));
+		context.write(new Text(influenceur));
 			
 	} catch(Exception e ) {
 		
