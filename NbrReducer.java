@@ -18,9 +18,9 @@ public void reduce(Text key,Iterable<IntWritable> values,Context context) throws
     	sum+= x.get();
     	
       
-      }
+      
     	summ += sum;
-    	
+    }
     
     }
     
