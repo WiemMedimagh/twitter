@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public  class TokenizerMapper
 extends Mapper<LongWritable, Text, Text, IntWritable>{
-@Override
+
 public void map(IntWritable key, Text value, Context context
              ) throws IOException, InterruptedException {
 	String line = value.toString();
